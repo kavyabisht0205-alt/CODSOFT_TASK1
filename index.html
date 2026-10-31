@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevCore - Programming Practice & Mastery Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="logo-icon">💻</span>
+            <span class="logo-text">DevCore<span class="dot">.</span></span>
+        </div>
+        <div class="nav-links">
+            <a href="#" onclick="switchTab('home')" id="nav-home" class="active">Home</a>
+            <a href="#" onclick="switchTab('exercises')" id="nav-exercises">Exercises</a>
+            <a href="#" onclick="switchTab('articles')" id="nav-articles">More About...</a>
+            <a href="#" onclick="switchTab('revision')" id="nav-revision">Revision Notes</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <!-- TAB 1: HOME VIEW -->
+        <section id="tab-home" class="tab-content">
+            <div class="hero-section">
+                <h1>Master Core Programming Languages</h1>
+                <p>Select your language to take adaptive code-snippet quizzes, explore guides, and review notes.</p>
+            </div>
+
+            <div class="selection-grid">
+                <div class="card language-card" onclick="startQuiz('Python')">
+                    <div class="lang-icon">🐍</div>
+                    <h3>Python</h3>
+                    <p>Test syntax, OOP structures, and dynamic logic.</p>
+                    <span class="start-link">Launch Quiz →</span>
+                </div>
+
+                <div class="card language-card" onclick="startQuiz('CPP')">
+                    <div class="lang-icon">⚙️</div>
+                    <h3>C++ & DSA</h3>
+                    <p>Master pointers, memory management, and STL containers.</p>
+                    <span class="start-link">Launch Quiz →</span>
+                </div>
+
+                <div class="card language-card" onclick="startQuiz('Java')">
+                    <div class="lang-icon">☕</div>
+                    <h3>Java</h3>
+                    <p>Explore object-oriented architecture and concurrency.</p>
+                    <span class="start-link">Launch Quiz →</span>
+                </div>
+            </div>
+
+            <!-- Article Section -->
+            <div class="article-section">
+                <h2>The Science of Active Recall & Code Snippet Practice</h2>
+                <div class="article-content">
+                    <p>In modern computer science education, students often fall into the trap of passive learning—reading documentation, watching multi-hour tutorial videos, or skimming through completed GitHub repositories. This creates a psychological illusion of competence where code looks intuitive because it is right in front of you. However, when faced with an empty editor during an interview or college lab exam, the syntax slips away.</p>
+                    <p>True cognitive retention is forged through <strong>active recall</strong> and targeted debugging. When you evaluate compact code snippets, trace loop invariants line by line, and identify subtle runtime exceptions (such as off-by-one errors or reference mutations), you engage higher-order cognitive processing. Repeated exposure to syntax edge cases hard-wires patterns into long-term memory.</p>
+                    <p>Whether you are building full-stack web applications or preparing for rigorous data structures and algorithms interviews, bridging the gap between theoretical syntax and practical code execution is the ultimate differentiator for an engineer.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: EXERCISES VIEW -->
+        <section id="tab-exercises" class="tab-content hidden">
+            <div class="hero-section">
+                <h1>Hands-On Practice Exercises</h1>
+                <p>Explore curated intermediate coding challenges sourced from industry-standard learning tracks.</p>
+            </div>
+
+            <!-- Python Section -->
+            <h3 style="margin-bottom: 1rem; color: var(--accent-indigo);">🐍 Python Intermediate Challenges (PYnative Inspired)</h3>
+            <div class="selection-grid" style="margin-bottom: 2.5rem;">
+                <div class="card" id="py-ex-1">
+                    <span class="tag">Python</span>
+                    <h3 style="margin-top: 1rem;">1. Dictionary Value Grouping</h3>
+                    <p>Merge two dictionaries. If they share keys, store a list combining values from both dictionaries.</p>
+                    <span class="start-link">View Solution →</span>
+                </div>
+                <div class="card" id="py-ex-2">
+                    <span class="tag">Python</span>
+                    <h3 style="margin-top: 1rem;">2. Flatten Nested Lists</h3>
+                    <p>Write a recursive function to unpack arbitrarily nested lists into a single flat list.</p>
+                    <span class="start-link">View Solution →</span>
+                </div>
+                <div class="card" id="py-ex-3">
+                    <span class="tag">Python</span>
+                    <h3 style="margin-top: 1rem;">3. Custom Stack Class</h3>
+                    <p>Implement a LIFO Stack using Python lists with push, pop, and peek methods.</p>
+                    <span class="start-link">View Solution →</span>
+                </div>
+            </div>
+
+            <!-- C++ Section -->
+            <h3 style="margin-bottom: 1rem; color: var(--accent-indigo);">⚙️ C++ & DSA Challenges (GeeksforGeeks / W3Resource Inspired)</h3>
+            <div class="selection-grid" style="margin-bottom: 2.5rem;">
+                <div class="card" id="cpp-ex-1">
+                    <span class="tag">C++ / DSA</span>
+                    <h3 style="margin-top: 1rem;">1. Two Sum Using Hash Map</h3>
+                    <p>Find indices of two numbers in an array adding up to a specific target in O(N) time.</p>
+                    <span class="start-link">View Solution →</span>
+                </div>
+                <div class="card" id="cpp-ex-2">
+                    <span class="tag">C++ / DSA</span>
+                    <h3 style="margin-top: 1rem;">2. Matrix Clockwise Rotation</h3>
+                    <p>Rotate the elements of a 2D square matrix by 90 degrees clockwise in-place.</p>
+                    <span class="start-link">View Solution →</span>
+                </div>
+                <div class="card" id="cpp-ex-3">
+                    <span class="tag">C++ / DSA</span>
+                    <h3 style="margin-top: 1rem;">3. Custom Dynamic Vector Class</h3>
+                    <p>Create a custom templated vector container supporting dynamic resizing and push_back.</p>
+                    <span class="start-link">View Solution →</span>
+                </div>
+            </div>
+
+            <!-- Java Section -->
+            <h3 style="margin-bottom: 1rem; color: var(--accent-indigo);">☕ Java OOP Challenges (W3Schools / W3Resource Inspired)</h3>
+            <div class="selection-grid">
+                <div class="card" id="java-ex-1">
+                    <span class="tag">Java</span>
+                    <h3 style="margin-top: 1rem;">1. Person & Constructor Setup</h3>
+                    <p>Create a Person class with name and age attributes, parameterized constructors, and display methods.</p>
+                    <span class="start-link">View Solution →</span>
+                </div>
+                <div class="card" id="java-ex-2">
+                    <span class="tag">Java</span>
+                    <h3 style="margin-top: 1rem;">2. Bank Account & Transaction System</h3>
+                    <p>Build Account and Bank classes to manage deposits, withdrawals, and balance tracking securely.</p>
+                    <span class="start-link">View Solution →</span>
+                </div>
+                <div class="card" id="java-ex-3">
+                    <span class="tag">Java</span>
+                    <h3 style="margin-top: 1rem;">3. Shape Hierarchy with Abstract Classes</h3>
+                    <p>Implement an abstract Shape class with subclasses for Rectangle and Circle calculating area.</p>
+                    <span class="start-link">View Solution →</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: MORE ABOUT... VIEW (Reliable Codecademy Links) -->
+        <section id="tab-articles" class="tab-content hidden">
+            <div class="hero-section">
+                <h1>More About Programming Tracks</h1>
+                <p>Explore official learning resources and articles directly on Codecademy.</p>
+            </div>
+            
+            <div style="display: grid; gap: 2rem;">
+                <!-- Python Card -->
+                <div class="card" onclick="window.open('https://www.codecademy.com/catalog/subject/computer-science', '_blank')" style="cursor: pointer;">
+                    <span class="tag">Python</span>
+                    <h2 style="margin: 0.75rem 0; font-size: 1.35rem;">Python Learning Catalogs & Articles</h2>
+                    <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 1.2rem;">
+                        Access structured Python articles, syntax documentation, and guided developer tracks on Codecademy.
+                    </p>
+                    <span class="start-link">Explore Python on Codecademy →</span>
+                </div>
+
+                <!-- C++ Card -->
+                <div class="card" onclick="window.open('https://www.codecademy.com/search?query=C%2B%2B', '_blank')" style="cursor: pointer;">
+                    <span class="tag">C++ & DSA</span>
+                    <h2 style="margin: 0.75rem 0; font-size: 1.35rem;">C++ & Systems Programming Resources</h2>
+                    <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 1.2rem;">
+                        Discover comprehensive C++ tutorials, memory management articles, and algorithmic problem-solving guides.
+                    </p>
+                    <span class="start-link">Explore C++ on Codecademy →</span>
+                </div>
+
+                <!-- Java Card -->
+                <div class="card" onclick="window.open('https://www.codecademy.com/search?query=Java', '_blank')" style="cursor: pointer;">
+                    <span class="tag">Java</span>
+                    <h2 style="margin: 0.75rem 0; font-size: 1.35rem;">Java Object-Oriented Articles</h2>
+                    <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 1.2rem;">
+                        Master enterprise backend architecture, class structures, and multithreading concepts with Codecademy resources.
+                    </p>
+                    <span class="start-link">Explore Java on Codecademy →</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: REVISION NOTES VIEW -->
+        <section id="tab-revision" class="tab-content hidden">
+            <div class="hero-section">
+                <h1>High-Yield Revision Cheat Sheets</h1>
+                <p>Advanced summaries engineered for rapid exam and technical interview prep.</p>
+            </div>
+            <div class="selection-grid">
+                <div class="card">
+                    <span class="tag">Python Master Cheatsheet</span>
+                    <ul style="color: var(--text-muted); padding-left: 1.2rem; margin-top: 1rem; line-height: 1.8;">
+                        <li><strong>Advanced Comprehensions:</strong> Nest loops easily via <code>[y for x in matrix for y in x]</code>.</li>
+                        <li><strong>Slicing Mechanics:</strong> <code>seq[start:end:step]</code> with negative steps reverses sequences in $O(N)$.</li>
+                        <li><strong>Iterators vs Generators:</strong> Generators use <code>yield</code> to maintain state lazily, saving memory.</li>
+                        <li><strong>Dunder Methods:</strong> Customize class behavior with <code>__init__</code>, <code>__str__</code>, and <code>__repr__</code>.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="tag">C++ / STL Master Cheatsheet</span>
+                    <ul style="color: var(--text-muted); padding-left: 1.2rem; margin-top: 1rem; line-height: 1.8;">
+                        <li><strong>Vector Capacity:</strong> Reallocates and doubles memory dynamically when capacity limit is reached.</li>
+                        <li><strong>Iterators & Algorithms:</strong> Use <code>std::sort(v.begin(), v.end())</code> for $O(N \log N)$ IntroSort.</li>
+                        <li><strong>Smart Pointers:</strong> <code>std::shared_ptr</code> manages reference counts; <code>std::unique_ptr</code> enforces sole ownership.</li>
+                        <li><strong>Pass by Reference:</strong> Always pass large objects using <code>const Type&amp;</code> to avoid copy overhead.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="tag">Java OOP Master Cheatsheet</span>
+                    <ul style="color: var(--text-muted); padding-left: 1.2rem; margin-top: 1rem; line-height: 1.8;">
+                        <li><strong>String Pool:</strong> Immutable strings are interned in a shared memory pool to optimize RAM usage.</li>
+                        <li><strong>Polymorphism:</strong> Method overloading happens at compile time; method overriding happens at runtime.</li>
+                        <li><strong>Collection Performance:</strong> <code>HashMap</code> offers $O(1)$ lookups; <code>TreeMap</code> maintains $O(\log N)$ sorted order.</li>
+                        <li><strong>Exception Hierarchy:</strong> Checked exceptions must be caught or declared; unchecked exceptions inherit from <code>RuntimeException</code>.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 5: QUIZ ENGINE VIEW -->
+        <section id="tab-quiz" class="tab-content hidden">
+            <div class="quiz-header">
+                <div class="quiz-meta">
+                    <span id="langBadge" class="tag">Language</span>
+                    <span id="roundBadge" class="tag round-tag">Round 1 / 5</span>
+                </div>
+                <div class="score-tracker">Score: <span id="currentScore">0</span></div>
+            </div>
+
+            <div class="progress-bar-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+            <div class="question-card">
+                <h2 id="questionText">Loading question...</h2>
+                <div id="snippetContainer" class="snippet-box hidden">
+                    <pre><code id="snippetCode"></code></pre>
+                </div>
+                <div id="optionsContainer" class="options-grid"></div>
+            </div>
+            
+            <button id="nextBtn" class="btn-primary hidden" onclick="nextQuestion()">Next Question →</button>
+        </section>
+
+        <!-- TAB 6: RESULTS VIEW -->
+        <section id="tab-result" class="tab-content hidden">
+            <div class="result-card">
+                <h2>Performance Diagnostic Report</h2>
+                <div class="score-display-box">
+                    <div class="score-circle">
+                        <span id="finalScoreNum">0/100</span>
+                    </div>
+                    <div class="score-text-summary">
+                        <h3 id="performanceTitle">Great Effort!</h3>
+                        <p id="performanceSub">Completed all adaptive difficulty tiers.</p>
+                    </div>
+                </div>
+
+                <div class="analysis-box">
+                    <h3>💡 Detailed Question Breakdown & Error Review</h3>
+                    <div id="missedQuestionsContainer" style="margin-top: 1rem;"></div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-primary" onclick="switchTab('home')">Back to Home Hub</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- EXERCISE MODAL POPUP -->
+    <div id="exerciseModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <span id="modalTag" class="tag" style="margin-bottom: 0.5rem; display:inline-block;">Tag</span>
+            <h2 id="modalTitle" style="margin-bottom: 1rem;">Title</h2>
+            <p id="modalDesc" style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.6;"></p>
+            <h4>Optimal Solution Code:</h4>
+            <div class="snippet-box" style="margin-top: 0.5rem;">
+                <pre><code id="modalCode"></code></pre>
+            </div>
+            <button class="btn-primary" style="float:none; margin-top:1.5rem;" onclick="closeModal()">Close Challenge</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
